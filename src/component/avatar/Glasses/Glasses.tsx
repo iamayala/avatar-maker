@@ -1,5 +1,5 @@
 import * as React from "react"
-import Svg, { Circle, Path } from "react-native-svg"
+import Svg, { G, Circle, Path, Defs, ClipPath } from "react-native-svg"
 
 function Glasses(props: any) {
   return (
@@ -11,21 +11,21 @@ function Glasses(props: any) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <Circle
-        cx={30.2689}
-        cy={36.2689}
-        r={4.26891}
-        stroke="#000"
-        strokeWidth={2}
+      <G clipPath="url(#clip0_606_982)" stroke="#000" strokeWidth={2}>
+        <Circle cx={30.2689} cy={36.2689} r={4.26891} />
+        <Circle cx={44.2689} cy={36.2689} r={4.26891} />
+        <Path d="M33.9852 35.1056L40.9852 35.002" />
+      </G>
+      <Path
+        stroke="#7B61FF"
+        strokeWidth={0.5}
+        d="M0.25 0.25H63.75V63.75H0.25z"
       />
-      <Circle
-        cx={44.2689}
-        cy={36.2689}
-        r={4.26891}
-        stroke="#000"
-        strokeWidth={2}
-      />
-      <Path stroke="#000" strokeWidth={2} d="M33.9852 35.1056L40.9852 35.002" />
+      <Defs>
+        <ClipPath id="clip0_606_982">
+          <Path fill="#fff" d="M0 0H64V64H0z" />
+        </ClipPath>
+      </Defs>
     </Svg>
   )
 }

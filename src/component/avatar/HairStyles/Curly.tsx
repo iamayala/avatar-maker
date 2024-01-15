@@ -12,6 +12,11 @@ function CurlyHair(props: any) {
       {...props}
     >
       <Path
+        stroke="#7B61FF"
+        strokeWidth={0.5}
+        d="M0.25 0.25H63.75V63.75H0.25z"
+      />
+      <Path
         fillRule="evenodd"
         clipRule="evenodd"
         d="M45.967 32.483a3.999 3.999 0 001.78-4.884 4 4 0 00-2.966-7.41c1.418 3.674 1.314 8.218 1.186 12.294z"
