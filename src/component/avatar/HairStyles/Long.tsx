@@ -1,15 +1,18 @@
 import * as React from "react"
 import Svg, { G, Path, Defs, ClipPath } from "react-native-svg"
-
-function LongHair(props: any) {
+type Props = {
+  width?: number
+  height?: number
+}
+function LongHair({width= 64, height= 64}: Props) {
   return (
     <Svg
-      width={64}
-      height={64}
+      width={width}
+      height={height}
       viewBox="0 0 64 64"
       fill="none"
+      //@ts-ignore
       xmlns="http://www.w3.org/2000/svg"
-      {...props}
     >
       <G clipPath="url(#clip0_606_679)">
         <G clipPath="url(#clip1_606_679)">
